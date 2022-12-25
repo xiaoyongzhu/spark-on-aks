@@ -42,17 +42,17 @@ RUN set -ex && \
     rm -rf /var/cache/apt/*
 
 # Download Spark and Hadoop Binaries
-RUN wget https://downloads.apache.org/spark/spark-3.0.1/spark-3.0.1-bin-hadoop3.2.tgz
+RUN wget https://downloads.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 
 # Extract tar all to path. Exclude certain files to reduce docker build time and container size
-RUN tar -xzvf spark-3.0.1-bin-hadoop3.2.tgz -C /opt/spark/ --strip-components 1
+RUN tar -xzvf spark-3.3.1-bin-hadoop3.tgz -C /opt/spark/ --strip-components 1
 
 RUN wget -P /opt/spark/jars/ https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-azure/3.2.1/hadoop-azure-3.2.1.jar
 RUN wget -P /opt/spark/jars/ https://repo1.maven.org/maven2/org/wildfly/openssl/wildfly-openssl/1.0.9.Final/wildfly-openssl-1.0.9.Final.jar
 
 
 # Clean up tar ball
-RUN rm spark-3.0.1-bin-hadoop3.2.tgz
+RUN rm spark-3.3.1-bin-hadoop3.tgz
 
 
 ENV SPARK_HOME /opt/spark

@@ -16,6 +16,6 @@ spec:
       serviceAccountName: spark-sa
       containers:
       - name: spark
-        image: anildwacontainerregistry.azurecr.io/spark:2.4.5
+        image: xiaoyzhuacrdytmchfs.azurecr.io/spark:3.3.1
         args: ["/bin/bash"]
         imagePullPolicy: Always

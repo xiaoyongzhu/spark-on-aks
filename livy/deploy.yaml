@@ -29,7 +29,7 @@ spec:
       serviceAccountName: spark-sa
       containers:
       - name: livy-server
-        image: anildwacontainerregistry.azurecr.io/livy:2.0
+        image: xiaoyzhuacrdytmchfs.azurecr.io/livy:2.0
         imagePullPolicy: Always
         args: ["livy-server"]
         ports:

@@ -1,3 +1,3 @@
 #!/bin/bash
-CONTAINER_REGISTRY=<your container registry name>
-az acr build -t $CONTAINER_REGISTRY/spark:2.4.5 -r $CONTAINER_REGISTRY .
+CONTAINER_REGISTRY="xiaoyzhuacrdytmchfs.azurecr.io"
+az acr build -t $CONTAINER_REGISTRY/spark:3.3.1 -r $CONTAINER_REGISTRY .
