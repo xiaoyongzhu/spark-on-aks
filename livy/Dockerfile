@@ -3,7 +3,7 @@ FROM openjdk:8-jdk-slim as build
 ENV GITHUB_REPO     apache/incubator-livy
 ENV GITHUB_BRANCH   master
 RUN mkdir -p /usr/share/man/man1
-RUN apt clean && apt update && apt -y install git maven python-pip r-base && \
+RUN apt clean && apt update && apt -y install git maven python3-pip python3 python-is-python3 r-base && \
     pip install --upgrade pip setuptools
 RUN git clone -b ${GITHUB_BRANCH} https://github.com/${GITHUB_REPO}.git && \
     cd incubator-livy && \
