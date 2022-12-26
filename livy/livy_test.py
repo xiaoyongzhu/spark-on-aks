@@ -6,7 +6,7 @@ import json, pprint, requests, textwrap
 host = 'http://20.252.45.68:8998'
 
 data= {
-        "name": "k8stestsession",
+        # "name": "k8stestsession",
         "kind": "pyspark",
         # "numExecutors": 2,
         # "driverMemory": "4g",
@@ -31,9 +31,11 @@ data= {
 # data = {'kind': 'spark'}
 headers = {'Content-Type': 'application/json'}
 
-r = requests.get(host + '/batches')
+r = requests.get(host + '/sessions')
 print(r.json())
 # exit(0)
+
+print("post sessions")
 
 r = requests.post(host + '/sessions', data=json.dumps(data), headers=headers)
 print(r.json())

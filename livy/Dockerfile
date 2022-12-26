@@ -16,7 +16,7 @@ FROM openjdk:8-jdk-slim
 RUN set -ex && \
     apt-get update && \
     ln -s /lib /lib64 && \
-    apt install -y bash tini libc6 libpam-modules libnss3 wget unzip && \
+    apt install -y bash tini libc6 libpam-modules libnss3 wget unzip procps && \
     mkdir -p /opt/spark && \
     mkdir -p /opt/hadoop && \
     mkdir -p /opt/spark/work-dir && \
