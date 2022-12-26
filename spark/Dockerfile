@@ -29,7 +29,7 @@ ARG spark_uid=185
 RUN set -ex && \
     apt-get update && \
     ln -s /lib /lib64 && \
-    apt install -y bash tini libc6 libpam-modules krb5-user libnss3 wget && \
+    apt install -y bash tini libc6 libpam-modules krb5-user libnss3 wget procps && \
     mkdir -p /opt/spark && \
     mkdir -p /opt/hadoop && \
     mkdir -p /opt/spark/examples && \
